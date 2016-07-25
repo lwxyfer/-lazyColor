@@ -1,0 +1,28 @@
+{
+  "name": "lazy-color",
+  "version": "1.0.0",
+  "description": "quickly color your background and text",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lwxyfer/lazyColor.git"
+  },
+  "keywords": [
+    "color"
+  ],
+  "author": "lwxyfer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lwxyfer/lazyColor/issues"
+  },
+  "homepage": "https://github.com/lwxyfer/lazyColor#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.11",
+    "gulp-less": "^3.1.0"
+  }
+}
