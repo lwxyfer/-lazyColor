@@ -1,6 +1,5 @@
-// am-red-1
-// am-cor-txt-1
-// hold DNY
+// color palette
+// Powered by Google material https://material.google.com/style/color.html#color-color-palette
 
 @red:
 #F44336,
@@ -300,7 +299,6 @@
 transparent;
 
 
-
 // 生成背景颜色表
 .generate-color(@str, @items, @n, @classname, @i: 1) when (@i =< @n) {
   .@{str}-@{classname}-@{i} {
@@ -308,6 +306,7 @@ transparent;
   }
   .generate-color(@str, @items, @n, @classname, (@i + 1));
 };
+
 // 生成字体颜色表
 .generate-text-color(@str, @items, @n, @classname, @i: 1) when (@i =< @n) {
   .@{str}-@{classname}-txt-@{i} {
@@ -319,7 +318,7 @@ transparent;
 // 选项配置
 @all-color: @red, @grey, @blue, @yellow, @light-green;  // 所需的所有的颜色
 @name: red,grey,blue,yellow,light-green; // 为每个色彩列表配置类名
-@prefix: am-cor; // 配置前缀
+@prefix: am-cor; // 配置自定义的前缀
 
 // 生成所有的颜色表
 .gen-all(@arr, @n, @classname, @i:1) when (@i =< @n) {
