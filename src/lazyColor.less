@@ -293,13 +293,15 @@
 #424242,
 #212121;
 
-@sp:
+@pure:
 #000000,
 #FFFFFF,
 transparent;
 
 
-// 生成背景颜色表
+
+
+// function: generate background color palette
 .generate-color(@str, @items, @n, @classname, @i: 1) when (@i =< @n) {
   .@{str}-@{classname}-@{i} {
     background-color: extract(@items, @i) !important;
@@ -307,7 +309,7 @@ transparent;
   .generate-color(@str, @items, @n, @classname, (@i + 1));
 };
 
-// 生成字体颜色表
+// function: generate font color palette
 .generate-text-color(@str, @items, @n, @classname, @i: 1) when (@i =< @n) {
   .@{str}-@{classname}-txt-@{i} {
     color: extract(@items, @i) !important;
@@ -315,12 +317,18 @@ transparent;
   .generate-text-color(@str, @items, @n, @classname, (@i + 1));
 };
 
-// 选项配置
-@all-color: @red, @grey, @blue, @yellow, @light-green;  // 所需的所有的颜色
-@name: red,grey,blue,yellow,light-green; // 为每个色彩列表配置类名
+// configuration
+// Color-List : red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey, pure
+
+// choose color that you want to generate
+@all-color:
+@red, @pink, @purple, @deep-purple, @indigo, @blue, @light-blue, @cyan, @teal, @green, @light-green, @lime, @yellow, @amber, @orange, @deep-orange, @brown, @grey, @blue-grey, @pure;
+
+@name: red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey, pure; // 为每个色彩列表配置类名
+
 @prefix: am-cor; // 配置自定义的前缀
 
-// 生成所有的颜色表
+// generate color
 .gen-all(@arr, @n, @classname, @i:1) when (@i =< @n) {
   .generate-color( @prefix, extract(@arr,@i), length( extract(@arr,@i) ), extract(@classname,@i), );
   .generate-text-color( @prefix, extract(@arr,@i), length( extract(@arr,@i) ), extract(@classname,@i), );

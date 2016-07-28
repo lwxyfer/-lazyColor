@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/lwxyfer/lazyColor#readme",
   "devDependencies": {
+    "amazeui-doc-util": "^0.7.1",
     "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.11",
